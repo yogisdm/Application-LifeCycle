@@ -7,8 +7,8 @@ pipeline {
                 ok 'Release!'
                 parameters {
                     extendedChoice defaultValue: 'Static_Check, QA , Unit Test', description: '', descriptionPropertyValue: 'Static_Check, QA , Unit Test', multiSelectDelimiter: ',', name: 'AppChecks', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX', value: 'Static_Check, QA , Unit Test', visibleItemCount: 5
-                    choiceParam('Success_Email',[],'')
-					choiceParam('Failure_Email',[],'')
+                    choice('Success_Email',[],'')
+					choice('Failure_Email',[],'')
 				}
             }
             steps {
