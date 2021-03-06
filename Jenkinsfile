@@ -7,7 +7,8 @@ pipeline {
                 ok 'Release!'
                 parameters {
                     extendedChoice defaultValue: 'Static_Check, QA , Unit Test', description: '', descriptionPropertyValue: 'Static_Check, QA , Unit Test', multiSelectDelimiter: ',', name: 'AppChecks', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_CHECKBOX', value: 'Static_Check, QA , Unit Test', visibleItemCount: 5
-                    choice choices: ['ABC@gmail.com'], description: '', name: 'Success Email'
+                    string defaultValue: 'abc@gmail.com', description: '', name: 'Success_Email', trim: false
+					string defaultValue: 'abc@gmail.com', description: '', name: 'Failure_Email', trim: false
 
 				}
             }
