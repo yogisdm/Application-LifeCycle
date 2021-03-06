@@ -1,7 +1,8 @@
+def appurl =  'https://calendarific.com/api/v2/holidays?&api_key=d20d05ccb411d9ce3b56b654971e17a29b0aa1ed&country=IN&year=2021'
+def geturl
+def getRC
 pipeline {
-       def appurl =  'https://calendarific.com/api/v2/holidays?&api_key=d20d05ccb411d9ce3b56b654971e17a29b0aa1ed&country=IN&year=2021'
-	   def geturl
-       def getRC
+
     agent any
     stages {
         stage('Input Arguments') {
@@ -29,9 +30,9 @@ pipeline {
 		}
 	stage('Is this run required?') {
 	   steps {
-        geturl = new URL('https://calendarific.com/api/v2/holidays?&api_key=d20d05ccb411d9ce3b56b654971e17a29b0aa1ed&country=IN&year=2021').openConnection()
-        getRC = geturl.getResponseCode();
-	   println(getRC);
+        ${geturl} = new URL('https://calendarific.com/api/v2/holidays?&api_key=d20d05ccb411d9ce3b56b654971e17a29b0aa1ed&country=IN&year=2021').openConnection()
+        ${getRC} = geturl.getResponseCode();
+	   
 
 }
 	   }
