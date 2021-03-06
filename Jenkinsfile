@@ -31,8 +31,7 @@ pipeline {
 	stage('Is this run required?') {
 	   steps {
 	   script {
-	    sudo chmod=+x "test.sh"
-          sh "./test.sh"
+	    bash test.sh
 	   }
 
 }
