@@ -30,8 +30,10 @@ pipeline {
 		}
 	stage('Is this run required?') {
 	   steps {
+	      git add --chmod=+x "test.sh"
+		  whoami
 	   script {
-	    whoami
+	    
 	   }
 
 }
