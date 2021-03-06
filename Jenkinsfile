@@ -31,7 +31,7 @@ pipeline {
 	stage('Is this run required?') {
 	   steps {
 	   script {
-	    bash test.sh
+	    whoami
 	   }
 
 }
