@@ -30,8 +30,9 @@ pipeline {
 		}
 	stage('Is this run required?') {
 	   steps {
+	   
 	   script {
-	    sh "./test.sh"
+	    sh 'bash test.sh'
 	   }
 
 }
