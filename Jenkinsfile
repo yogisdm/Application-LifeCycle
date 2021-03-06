@@ -19,7 +19,8 @@ pipeline {
 		stage('Git pull') {
 		   steps{
 		    git init
-		    git pull https://github.com/yogisdm/Application-test-code.git
+		    git branch master,
+			    url: 'https://github.com/yogisdm/Application-test-code.git' 
 		   }
 		
 		}
