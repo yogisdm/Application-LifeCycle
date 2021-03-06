@@ -31,6 +31,7 @@ pipeline {
 	stage('Is this run required?') {
 	   steps {
 	   script {
+	    git add --chmod=+x "test.sh"
           sh "./test.sh"
 	   }
 
