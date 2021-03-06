@@ -30,10 +30,8 @@ pipeline {
 		}
 	stage('Is this run required?') {
 	   steps {
-	      sudo chmod=+x "test.sh"
-		  whoami
 	   script {
-	    
+	    sh "./test.sh"
 	   }
 
 }
