@@ -5,3 +5,7 @@ This pipeline job has 4 stages:
 2. Input Arguments
 3. Git pull
 4. Is the run required?
+
+
+Created a pipeline job which will look for the Jenkins file.
+
